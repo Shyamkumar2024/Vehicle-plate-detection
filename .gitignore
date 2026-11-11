@@ -1,0 +1,64 @@
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ── Virtual Environments ─────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Environment & Secrets ────────────────────────────────
+.env
+.env.*
+.streamlit/secrets.toml
+
+# ── Model weights (too large for git — download separately)
+*.pt
+*.pth
+*.onnx
+*.pb
+models/easyocr/
+# Keep the models/ directory structure
+!models/.gitkeep
+
+# ── Database (runtime data — not source code) ────────────
+data/vehicle_inventory.db
+data/*.db
+
+# ── Raw/Processed data ───────────────────────────────────
+data/raw/**
+data/processed/**
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# ── Outputs (generated at runtime) ──────────────────────
+outputs/**
+!outputs/.gitkeep
+
+# ── Notebooks checkpoints ────────────────────────────────
+notebooks/.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── OS & Editor ─────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/settings.json
+
+# ── Windows scripts (local only) ─────────────────────────
+powershell.cmd
+*.cmd
+
+# ── Logs ────────────────────────────────────────────────
+*.log
+logs/

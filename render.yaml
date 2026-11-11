@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: vehicle-intelligence
+    env: python
+    plan: standard
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.headless true --browser.gatherUsageStats false
+    envVars:
+      - key: PYTHONPATH
+        value: .
+    disk:
+      name: vehicle-data
+      mountPath: /data
+      sizeGB: 5
+
