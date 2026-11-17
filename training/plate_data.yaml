@@ -1,0 +1,8 @@
+# Every label in this dataset must use class ID 0 for license_plate.
+path: D:/Downloads/vehicle-intelligence/data/processed/plate_yolo
+train: train/images
+val: valid/images
+test: test/images
+
+names:
+  0: license_plate
